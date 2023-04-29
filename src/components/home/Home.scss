@@ -1,0 +1,43 @@
+@import "../../styles/breakpoint";
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 3rem;
+  }
+
+  .input {
+    background-color: #e5e5e7;
+    width: 300px;
+    border: none;
+    border-radius: 16px;
+    padding-left: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .todo__cont {
+    margin-top: 4px;
+    p {
+      font-size: 14px;
+    }
+
+    .todo {
+      width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 15px;
+      margin: 10px 0;
+      padding: 0 10px;
+      p {
+        padding: 2px 0;
+      }
+    }
+  }
+}
