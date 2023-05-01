@@ -1,6 +1,6 @@
 import supabase from "../../config/supabaseClient";
 import { useEffect, useState } from "react";
-import { AiOutlineDelete } from "react-icons/ai";
+import TodoItem from "../todoItem/TodoItem";
 
 import "./Home.scss";
 
@@ -30,7 +30,6 @@ const Home = () => {
     }
 
     if (todo) {
-      console.log(todo);
       setTodos([todo, ...todos]);
       setFormError(null);
     }
@@ -81,24 +80,11 @@ const Home = () => {
 
         {formError && <p>{formError}</p>}
       </form>
-      <div className="todo__cont">
-        {fetchError && <p>{fetchError}</p>}
-        {todos && (
-          <div>
-            {todos.map((todo) => (
-              <div className="todo" key={todo.id}>
-                <span>
-                  <input type="radio" />
-                </span>
-                <p>{todo.task}</p>
-                <span>
-                  <AiOutlineDelete onClick={() => handleDelete(todo.id)} />
-                </span>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+      <TodoItem
+        fetchError={fetchError}
+        todos={todos}
+        handleDelete={handleDelete}
+      />
     </section>
   );
 };

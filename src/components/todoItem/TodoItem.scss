@@ -1,0 +1,22 @@
+@import "../../styles/breakpoint";
+
+.todo__cont {
+  margin-top: 4px;
+  p {
+    font-size: 14px;
+  }
+
+  .todo {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px 0;
+    padding: 0 10px;
+    p {
+      padding: 2px 0;
+    }
+  }
+}
